@@ -8,6 +8,6 @@ it('should not start new game with no names', () => {
   const onNewGame = jest.fn();
   const { queryByText } = render(<Registration onNewGame={onNewGame} />);
   //fireEvent.change(queryByTestId('player1'), { target: { value: 'Yaniv' } });
-  fireEvent.click(queryByText('New Game'));
+  fireEvent.click(queryByText('new game'));
   expect(onNewGame).not.toHaveBeenCalled();
 });
